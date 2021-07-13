@@ -23,6 +23,7 @@ class math{
     } 
 }
 public class Main{
+    
     public static void main(String args[]){
         math square1 =new math(11,22,33);
         math square2 =new math();
