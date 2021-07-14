@@ -1,25 +1,26 @@
 class param{
-    int a,b;
-    param(int i , int j){
+    int a;
+    param(int i ){
         a = i ;
-        b = j;
+        
     }
-    void meth(param ob){
-        ob.a*= 2;
-        ob.b/= 2;
+    param meth(){
+        param ob = new param(a +10);
+        return ob;
     }
 }
 
 
 public class box {
     public static void main(String args[]){
-        param ob = new param(15,20);
-        
+        param ob1 = new param(15);
+        param ob2;
+        ob2 = ob1.meth();
+        System.out.println("ob1.a: " + ob1.a );
+        System.out.println("ob2.a: " + ob2.a );
+        ob2 = ob2.meth();
 
-        System.out.println("a and b before: " + ob.a +" " + ob.b);
-        ob.meth(ob);
-
-        System.out.println("a and b after: " + ob.a +" " + ob.b );
+        System.out.println("ob2.a after: " + ob2.a  );
     }
     
 }
