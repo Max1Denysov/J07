@@ -1,7 +1,7 @@
 class Factorial{
     int values[];
     Factorial(int i) {
-        values = new int[10];
+        values = new int[i];
     }
     void printArray(int i){
         if (i==0) return;
